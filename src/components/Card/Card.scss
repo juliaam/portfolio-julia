@@ -1,0 +1,18 @@
+@use '../../styles/colors.scss' as colors;
+@use '../../styles/fonts.scss' as fonts;
+
+.card {
+  padding: 6rem 3.5rem;
+  border-radius: 12px;
+  background-color: colors.$red;
+
+  &__title {
+    font-family: fonts.$titleFont;
+    font-size: 3rem;
+    font-weight: 600;
+  }
+  &__description {
+    font-family: fonts.$primaryFont;
+    font-weight: 500;
+  }
+}

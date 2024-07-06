@@ -1,0 +1,43 @@
+@use '../../../styles/fonts.scss' as fonts;
+@use '../../../styles/colors.scss' as colors;
+
+.navbar {
+  width: 100%;
+
+  font-family: fonts.$primaryFont;
+  font-size: 1.8rem;
+
+  padding: 1.6rem 0;
+
+  &__list {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding-inline: 22rem;
+  }
+
+  &__icon {
+    font-family: fonts.$titleFont;
+    font-size: 2.6rem;
+    line-height: 2.4;
+    font-weight: 400;
+  }
+
+  &__topics {
+    display: flex;
+
+    gap: 3rem;
+
+    li {
+      transition: color 0.1s ease;
+    }
+
+    li:hover {
+      color: colors.$red;
+
+      cursor: pointer;
+    }
+  }
+}

@@ -1,8 +1,10 @@
+@use '../styles/colors.scss' as colors;
+
 :root {
   font-size: 62.5%;
-  
-  background-color: #242424;
-  color: whitesmoke;
+
+  background-color: colors.$white;
+  color: colors.$black;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -45,10 +47,4 @@ ul {
 
 * {
   box-sizing: border-box;
-}
-
-.main {
-  height: 100vh;
-  min-height: 80rem;
-  max-height: 120rem
 }
