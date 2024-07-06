@@ -1,6 +1,5 @@
 :root {
   font-size: 62.5%;
-  margin: 0 auto;
   
   background-color: #242424;
   color: whitesmoke;
@@ -9,19 +8,24 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  overflow-x: hidden;
 }
 
 body {
   font-size: 62.5%;
 
-  margin: 0 auto;
-
-  min-width: 320px;
-  min-height: 100vh;
+  padding: 0;
+  margin: 0;
 }
 
-li {
-  list-style-type: none;
+ul {
+  margin: 0;
+  padding: 0;
+
+  li {
+    list-style-type: none;
+  }
 }
 
 @media (prefers-color-scheme: light) {
@@ -37,4 +41,14 @@ li {
   button {
     background-color: #f9f9f9;
   }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.main {
+  height: 100vh;
+  min-height: 80rem;
+  max-height: 120rem
 }

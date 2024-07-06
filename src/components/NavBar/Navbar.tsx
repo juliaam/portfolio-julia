@@ -10,6 +10,7 @@ export function Navbar() {
         <div className="navbar__topics">
           <li>Sobre mim</li>
           <li>Projetos</li>
+          <li>Formações</li>
           <li>Contatos</li>
         </div>
       </ul>
