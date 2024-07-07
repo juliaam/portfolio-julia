@@ -5,14 +5,22 @@
   padding: 6rem 3.5rem;
   border-radius: 12px;
   background-color: colors.$red;
+  text-align: center;
+  border: 2px solid colors.$black;
 
   &__title {
     font-family: fonts.$titleFont;
-    font-size: 3rem;
+    font-size: 3.2rem;
     font-weight: 600;
   }
   &__description {
     font-family: fonts.$primaryFont;
+    font-size: 2.4rem;
     font-weight: 500;
+  }
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
   }
 }

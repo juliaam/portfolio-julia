@@ -7,18 +7,32 @@
   color: colors.$black;
   font-family: fonts.$titleFont;
 
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  margin-bottom: 60rem;
+
   &__body {
     text-align: center;
+    max-width: 80rem;
   }
 
   &__title {
     font-size: 4.1rem;
-
     font-weight: 800;
   }
 
   &__subtitle {
     font-size: 2rem;
     line-height: 1.6;
+  }
+
+  &__icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+
+    margin-top: 10rem;
   }
 }

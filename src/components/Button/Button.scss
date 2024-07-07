@@ -1,0 +1,46 @@
+@use '../../styles/colors.scss' as colors;
+@use '../../styles/fonts.scss' as fonts;
+
+.button {
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: fonts.$primaryFont;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: colors.$black;
+  background: colors.$white;
+  border: 2px solid colors.$black;
+  border-radius: 5px;
+  cursor: pointer;
+  transition:
+    all 0.3s ease,
+    transform 0.3s ease;
+}
+
+.button-icon {
+  display: flex;
+  align-items: center;
+  margin-left: 0.5rem;
+}
+
+.button:hover {
+  background: #e4e4e4;
+  color: colors.$black;
+  border-color: colors.$gray;
+  font-weight: 600;
+  transform: scale(1.05);
+}
+
+.button:active {
+  background: colors.$gray;
+  border-color: colors.$gray;
+  color: colors.$white;
+}
+
+.button:focus {
+  outline: none;
+  box-shadow: 0 0 5px colors.$black;
+}

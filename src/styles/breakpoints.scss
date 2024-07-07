@@ -1,6 +1,6 @@
 $extraSmallDeviceSizeMin: 20em;
 $smallDeviceSizeMin: 22.5em;
-$mediumDeviceSizeMin: 41.6875em;
+$mediumDeviceSizeMin: 48em;
 $largeDeviceSizeMin: 64em;
 $largestDeviceSizeMin: 80em;
 
@@ -16,7 +16,7 @@ $largestDeviceSizeMin: 80em;
   }
 }
 
-@mixin from667 {
+@mixin from768 {
   @media (min-width: $mediumDeviceSizeMin) {
     @content;
   }

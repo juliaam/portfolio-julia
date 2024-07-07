@@ -1,7 +1,37 @@
-.projects {
-  width: auto;
-  margin: 0 auto;
+@use '../../../styles/breakpoints.scss' as breakpoints;
+@use '../../../styles/fonts.scss' as fonts;
 
-  display: flex;
-  flex-wrap: wrap;
+.projects {
+  width: 100%;
+  padding-inline: 10rem;
+  text-align: center;
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+
+    gap: 2.5rem;
+  }
+
+  &__title {
+    font-family: fonts.$comfortaaFont;
+    font-size: 3.4rem;
+    font-weight: 800;
+  }
+}
+
+@include breakpoints.from768 {
+  .projects {
+    &__cards {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+}
+
+@include breakpoints.from1024 {
+  .projects {
+    &__cards {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
 }

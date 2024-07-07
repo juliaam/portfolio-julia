@@ -3,12 +3,17 @@ import './Projects.scss';
 
 export function Projects() {
   return (
-    <div className="projects">
-      <div className="container">
-        <Card
-          title="cadastro"
-          description="App de cadastro com opção de cadastro com google"
-        />
+    <div className="projects" id="projects">
+      <h1 className="projects__title">Projetos que contribui</h1>
+      <div className="projects__cards">
+        <Card title="aa" description="aa" />
+        {/* fazer map */}
+      </div>
+
+      <h1 className="projects__title">Projetos autorais</h1>
+      <div className="projects__cards">
+        <Card title="aa" description="aa" />
+        {/* fazer map */}
       </div>
     </div>
   );

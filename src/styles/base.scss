@@ -10,8 +10,12 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
 
-  overflow-x: hidden;
+a {
+  color: inherit;
+  text-decoration: inherit;
 }
 
 body {
