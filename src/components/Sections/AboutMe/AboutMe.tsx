@@ -51,11 +51,7 @@ export function AboutMe() {
           processo das coisas, e busco sempre me aprimorar, seja tecnicamente ou
           como pessoa.
         </p>
-        <a
-          href="/src/data/pdf/resume.pdf"
-          download
-          className="aboutMe__btn-container"
-        >
+        <a href="resume.pdf" download className="aboutMe__btn-container">
           <Button
             className="aboutMe__resume-button"
             label="Currículo"
