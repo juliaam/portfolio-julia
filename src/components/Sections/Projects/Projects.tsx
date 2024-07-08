@@ -3,7 +3,7 @@ import './Projects.scss';
 
 export function Projects() {
   return (
-    <div className="projects" id="projects">
+    <section className="projects" id="projects">
       <h1 className="projects__title">Projetos que contribui</h1>
       <div className="projects__cards">
         <Card title="aa" description="aa" />
@@ -15,6 +15,6 @@ export function Projects() {
         <Card title="aa" description="aa" />
         {/* fazer map */}
       </div>
-    </div>
+    </section>
   );
 }

@@ -11,11 +11,16 @@
   justify-content: center;
   width: 100%;
 
-  margin-bottom: 60rem;
+  margin-bottom: 20rem;
 
   &__body {
     text-align: center;
+    align-items: center;
     max-width: 80rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   &__title {
@@ -32,7 +37,48 @@
     display: flex;
     justify-content: center;
     gap: 1.5rem;
+  }
+
+  &__tab {
+    cursor: pointer;
+    &--active {
+      text-decoration: colors.$black underline;
+    }
+  }
+
+  &__custom-hr {
+    height: 2px;
+    width: 100%;
+    background-color: #1d1c1c;
+    margin: 20px 0;
 
     margin-top: 10rem;
+  }
+
+  &__education {
+    &--footer {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin-top: 2rem;
+    }
+  }
+
+  &__resume-button {
+    width: 30%;
+
+    margin-top: 2rem;
+  }
+
+  &__tabber {
+    padding-top: 5rem;
+  }
+
+  &__tabberTitles {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+
+    padding-bottom: 5rem;
   }
 }

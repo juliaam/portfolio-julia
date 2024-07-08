@@ -14,12 +14,6 @@ export function Navbar() {
           <li aria-label="projetos">
             <a href="#projects">Projetos</a>
           </li>
-          <li aria-label="formações">
-            <a href="#education">Formações</a>
-          </li>
-          <li aria-label="contatos">
-            <a href="#contacts">Contatos</a>
-          </li>
         </div>
       </ul>
     </nav>
