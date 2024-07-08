@@ -2,25 +2,44 @@
 @use '../../styles/fonts.scss' as fonts;
 
 .card {
-  padding: 6rem 3.5rem;
+  padding: 2rem 3.5rem;
   border-radius: 12px;
   background-color: colors.$red;
   text-align: center;
   border: 2px solid colors.$black;
+  display: flex;
+  flex-direction: column;
 
   &__title {
     font-family: fonts.$titleFont;
     font-size: 3.2rem;
     font-weight: 600;
   }
+
   &__description {
     font-family: fonts.$primaryFont;
     font-size: 2.4rem;
     font-weight: 500;
   }
+
   &__buttons {
     display: flex;
     justify-content: center;
     gap: 2rem;
+    margin-bottom: 0;
+  }
+
+  &__stack {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: auto;
+    margin-bottom: 0;
+    padding-bottom: 1rem;
+  }
+  &__stack-icon {
+    background-color: colors.$white;
+    padding: 0.2rem;
+    border-radius: 15px;
   }
 }
