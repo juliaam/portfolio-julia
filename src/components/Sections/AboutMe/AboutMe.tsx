@@ -4,6 +4,8 @@ import './AboutMe.scss';
 import { Button } from '../../Button/Button';
 import { tabs } from '../../../data/tabs/TABS';
 import { useState } from 'react';
+import { redirect } from '../../../utils/redirectFunc';
+import { CONTACTS } from '../../../data/contactsData/CONTACTS';
 
 export function AboutMe() {
   const [selectedTab, setSelectedTab] = useState<string>(tabs[0].id);
@@ -26,6 +28,19 @@ export function AboutMe() {
       '/src/data/pdf/estagio-analise-sistemas-julia-moraes.pdf',
       '_blank'
     );
+  };
+
+  const getLinkById = (id: 'linkedin' | 'github' | 'mail') => {
+    const contact = CONTACTS.find((contact) => contact.id === id);
+    if (contact) {
+      return contact.link;
+    }
+    return '';
+  };
+
+  const openMail = (link: string) => {
+    console.log(link, 'link');
+    window.location.href = link;
   };
 
   const selectActualTab = (tabId: string) => () => {
@@ -51,8 +66,6 @@ export function AboutMe() {
           onClick={openPdf}
         />
 
-        {/* <div className="aboutMe__custom-hr"></div> */}
-
         <div className="aboutMe__tabber">
           <div className="aboutMe__tabberTitles">
             {tabs.map((tab, index) => (
@@ -71,9 +84,18 @@ export function AboutMe() {
           </div>
           {selectedTab === 'contact' && (
             <div className="aboutMe__icons">
-              <SocialMediaButton icon={<Linkedin />} />
-              <SocialMediaButton icon={<Github />} />
-              <SocialMediaButton icon={<Mail />} />
+              <SocialMediaButton
+                icon={<Linkedin />}
+                onClick={() => redirect(getLinkById('linkedin'))}
+              />
+              <SocialMediaButton
+                icon={<Github />}
+                onClick={() => redirect(getLinkById('github'))}
+              />
+              <SocialMediaButton
+                icon={<Mail />}
+                onClick={() => openMail(getLinkById('mail'))}
+              />
             </div>
           )}
           {selectedTab === 'skills' && (
@@ -81,31 +103,31 @@ export function AboutMe() {
               <img
                 width={48}
                 height={48}
-                src="public/javascript.svg"
+                src="/javascript.svg"
                 className="aboutMe__icon"
               />
               <img
                 width={48}
                 height={48}
-                src="public/vue.svg"
+                src="/vue.svg"
                 className="aboutMe__icon"
               />
               <img
                 width={48}
                 height={48}
-                src="public/react.svg"
+                src="/react.svg"
                 className="aboutMe__icon"
               />
               <img
                 width={48}
                 height={48}
-                src="public/css.svg"
+                src="/css.svg"
                 className="aboutMe__icon"
               />
               <img
                 width={48}
                 height={48}
-                src="public/html.svg"
+                src="/html.svg"
                 className="aboutMe__icon"
               />
             </div>
@@ -115,7 +137,15 @@ export function AboutMe() {
               Pontifícia Universidade Católica do Rio Grande do Sul - Análise e
               Desenvolvimento de Sistemas - {collegeSemesterByDate()} período
               <div className="aboutMe__education--footer">
-                <Button label="Ver curso" icon={<ArrowRight />} />
+                <Button
+                  label="Ver curso"
+                  icon={<ArrowRight />}
+                  onClick={() =>
+                    redirect(
+                      'https://online.pucrs.br/graduacao/analise-desenvolvimento-sistemas-full-stack-mobile'
+                    )
+                  }
+                />
               </div>
             </div>
           )}

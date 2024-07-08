@@ -27,7 +27,7 @@
 }
 
 .button:hover {
-  background: #e4e4e4;
+  background: colors.$red;
   color: colors.$black;
   border-color: colors.$gray;
   transform: scale(1.05);

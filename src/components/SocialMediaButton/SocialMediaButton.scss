@@ -12,7 +12,8 @@
   color: colors.$darkGray;
 
   &:hover {
-    background-color: colors.$darkGray;
+    border: 2px solid colors.$white;
+    background-color: colors.$red;
     transform: scale(1.1);
     color: colors.$white;
   }

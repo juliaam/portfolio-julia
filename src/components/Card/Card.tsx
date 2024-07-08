@@ -1,6 +1,7 @@
 import { ArrowRight, Github } from 'lucide-react';
 import { Button } from '../Button/Button';
 import './Card.scss';
+import { redirect } from '../../utils/redirectFunc';
 
 type CardProps = {
   title: string;
@@ -9,6 +10,7 @@ type CardProps = {
   status: string;
   github: string;
   link: string;
+  img: string;
 };
 
 type Stack =
@@ -27,32 +29,29 @@ export function Card({
   title,
   description,
   stack,
-  status,
+  // status,
   github,
   link,
+  img,
 }: CardProps) {
   const stackIcons: any = {
-    Javascript: 'public/javascript.svg',
-    Html: 'public/html.svg',
-    Css: 'public/css.svg',
-    VueJs: 'public/vue.svg',
-    NodeJs: 'public/nodejs.svg',
-    Express: 'public/express.svg',
-    React: 'public/react.svg',
-    Typescript: 'public/typescript.svg',
-    Zustand: 'public/zustand.svg',
-    NestJs: 'public/nestjs.svg',
-  };
-
-  const redirect = (link: string): any => {
-    console.log('link', link);
-    window.open(link, '_blank');
+    Javascript: '/javascript.svg',
+    Html: '/html.svg',
+    Css: '/css.svg',
+    VueJs: '/vue.svg',
+    NodeJs: '/nodejs.svg',
+    Express: '/express.svg',
+    React: '/react.svg',
+    Typescript: '/typescript.svg',
+    Zustand: '/zustand.svg',
+    NestJs: '/nestjs.svg',
   };
 
   return (
     <div className="card">
       <p className="card__title">{title}</p>
       <p className="card__description">{description}</p>
+      {img && <img className="card__img" src={img} />}
       <div className="card__stack">
         {stack.split(', ').map((tech, index) => (
           <img
@@ -67,7 +66,7 @@ export function Card({
         <Button
           label="Ir para projeto"
           icon={<ArrowRight />}
-          onClick={redirect(link)}
+          onClick={() => redirect(link)}
         />
         <Button
           label="Github"

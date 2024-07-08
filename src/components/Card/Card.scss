@@ -1,14 +1,17 @@
 @use '../../styles/colors.scss' as colors;
 @use '../../styles/fonts.scss' as fonts;
+@use '../../styles/breakpoints.scss' as breakpoints;
 
 .card {
   padding: 2rem 3.5rem;
   border-radius: 12px;
-  background-color: colors.$red;
+  background-color: colors.$lightGray;
   text-align: center;
   border: 2px solid colors.$black;
   display: flex;
   flex-direction: column;
+
+  row-gap: 2rem;
 
   &__title {
     font-family: fonts.$titleFont;
@@ -41,5 +44,18 @@
     background-color: colors.$white;
     padding: 0.2rem;
     border-radius: 15px;
+  }
+
+  &__img {
+    border-radius: 5px;
+  }
+}
+
+@include breakpoints.from1280 {
+  .card {
+    &__img {
+      width: 465px;
+      height: 270px;
+    }
   }
 }

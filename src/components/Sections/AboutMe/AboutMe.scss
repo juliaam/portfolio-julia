@@ -42,7 +42,8 @@
   &__tab {
     cursor: pointer;
     &--active {
-      text-decoration: colors.$black underline;
+      color: colors.$red;
+      text-decoration: colors.$red underline;
     }
   }
 
