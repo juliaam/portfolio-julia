@@ -6,6 +6,7 @@ import { tabs } from '../../../data/tabs/TABS';
 import { useState } from 'react';
 import { redirect } from '../../../utils/redirectFunc';
 import { CONTACTS } from '../../../data/contactsData/CONTACTS';
+import fileDownload from 'js-file-download';
 
 export function AboutMe() {
   const [selectedTab, setSelectedTab] = useState<string>(tabs[0].id);
@@ -23,11 +24,19 @@ export function AboutMe() {
     return Math.ceil(diffMeses / 6);
   };
 
-  const openPdf = () => {
-    window.open(
-      '/src/data/pdf/estagio-analise-sistemas-julia-moraes.pdf',
-      '_blank'
-    );
+  const downloadPdf = async () => {
+    try {
+      const response = await fetch(
+        '/src/data/pdf/estagio-analise-sistemas-julia-moraes.pdf'
+      );
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      const blob = await response.blob();
+      fileDownload(blob, 'estagio-analise-sistemas-julia-moraes.pdf');
+    } catch (error) {
+      console.error('Error downloading the PDF:', error);
+    }
   };
 
   const getLinkById = (id: 'linkedin' | 'github' | 'mail') => {
@@ -63,7 +72,7 @@ export function AboutMe() {
           className="aboutMe__resume-button"
           label="Currículo"
           icon={<ArrowRight />}
-          onClick={openPdf}
+          onClick={downloadPdf}
         />
 
         <div className="aboutMe__tabber">
