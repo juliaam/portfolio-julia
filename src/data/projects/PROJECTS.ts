@@ -10,15 +10,6 @@ export const PROJECTS_BYME = [
     github: 'https://github.com/juliaam/projeto-cadastro-front',
   },
   {
-    title: 'Cadastro Backend',
-    description: 'Projeto de cadastro com login pelo google - API',
-    stack: 'NodeJs, Express',
-    status: 'Em andamento',
-    link: '',
-    img: '',
-    github: 'https://github.com/juliaam/projeto-cadastro-front',
-  },
-  {
     title: 'Calculadora',
     description: 'Primeiro projeto pessoal que fiz, uma calculadora em Vue.js',
     status: 'Concluído',
@@ -26,6 +17,15 @@ export const PROJECTS_BYME = [
     link: '',
     img: '/img/calculadora.png',
     github: 'https://github.com/juliaam/calculadora-vue',
+  },
+  {
+    title: 'Cadastro Backend',
+    description: 'Projeto de cadastro com login pelo google - API',
+    stack: 'NodeJs, Express',
+    status: 'Em andamento',
+    link: '',
+    img: '',
+    github: 'https://github.com/juliaam/projeto-cadastro-front',
   },
   {
     title: 'Serviço de Aeronaves',
