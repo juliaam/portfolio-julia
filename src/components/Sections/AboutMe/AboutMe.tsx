@@ -5,7 +5,6 @@ import { Button } from '../../Button/Button';
 import { useState } from 'react';
 import { redirect } from '../../../utils/redirectFunc';
 import { CONTACTS, tabs } from '../../../contants/index';
-import fileDownload from 'js-file-download';
 
 export function AboutMe() {
   const [selectedTab, setSelectedTab] = useState<string>(tabs[0].id);
@@ -21,21 +20,6 @@ export function AboutMe() {
       (today.getMonth() - dateInitCollege.getMonth());
 
     return Math.ceil(diffMeses / 6);
-  };
-
-  const downloadPdf = async () => {
-    try {
-      const response = await fetch(
-        '/src/data/pdf/estagio-analise-sistemas-julia-moraes.pdf'
-      );
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-      const blob = await response.blob();
-      fileDownload(blob, 'estagio-analise-sistemas-julia-moraes.pdf');
-    } catch (error) {
-      console.error('Error downloading the PDF:', error);
-    }
   };
 
   const getLinkById = (id: 'linkedin' | 'github' | 'mail') => {
