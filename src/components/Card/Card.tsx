@@ -13,18 +13,6 @@ type CardProps = {
   img: string;
 };
 
-type Stack =
-  | 'Javascript'
-  | 'Html'
-  | 'Css'
-  | 'Vue.Js'
-  | 'NodeJs'
-  | 'Express'
-  | 'React'
-  | 'Typescript'
-  | 'Zustand'
-  | 'NestJs';
-
 export function Card({
   title,
   description,
