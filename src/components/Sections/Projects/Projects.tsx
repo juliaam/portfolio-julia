@@ -1,9 +1,6 @@
 import { Card } from '../../Card/Card';
 import './Projects.scss';
-import {
-  PROJECTS_BYME,
-  PROJECTS_CONTRIBUITED,
-} from '../../../data/projects/PROJECTS';
+import { PROJECTS_BYME, PROJECTS_CONTRIBUITED } from '../../../contants/index';
 
 export function Projects() {
   return (

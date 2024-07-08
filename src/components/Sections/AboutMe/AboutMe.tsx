@@ -2,10 +2,9 @@ import { ArrowRight, Github, Linkedin, Mail } from 'lucide-react';
 import { SocialMediaButton } from '../../SocialMediaButton/SocialMediaButton';
 import './AboutMe.scss';
 import { Button } from '../../Button/Button';
-import { tabs } from '../../../data/tabs/TABS';
 import { useState } from 'react';
 import { redirect } from '../../../utils/redirectFunc';
-import { CONTACTS } from '../../../data/contactsData/CONTACTS';
+import { CONTACTS, tabs } from '../../../contants/index';
 import fileDownload from 'js-file-download';
 
 export function AboutMe() {
@@ -68,13 +67,17 @@ export function AboutMe() {
           processo das coisas, e busco sempre me aprimorar, seja tecnicamente ou
           como pessoa.
         </p>
-        <Button
-          className="aboutMe__resume-button"
-          label="Currículo"
-          icon={<ArrowRight />}
-          onClick={downloadPdf}
-        />
-
+        <a
+          href="/src/data/pdf/resume.pdf"
+          download
+          className="aboutMe__btn-container"
+        >
+          <Button
+            className="aboutMe__resume-button"
+            label="Currículo"
+            icon={<ArrowRight />}
+          />
+        </a>
         <div className="aboutMe__tabber">
           <div className="aboutMe__tabberTitles">
             {tabs.map((tab, index) => (

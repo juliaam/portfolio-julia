@@ -65,8 +65,10 @@
     }
   }
 
-  &__resume-button {
+  &__btn-container {
     width: 30%;
+    display: flex;
+    justify-content: center;
 
     margin-top: 2rem;
   }

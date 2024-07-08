@@ -1,3 +1,11 @@
+export const CONTACTS = [
+  {
+    id: 'linkedin',
+    link: 'https://www.linkedin.com/in/júlia-moraes-887673232/',
+  },
+  { id: 'github', link: 'https://github.com/juliaam' },
+  { id: 'mail', link: 'mailto:juliademoraess@gmail.com' },
+];
 export const PROJECTS_BYME = [
   {
     title: 'Cadastro FrontEnd',
@@ -70,4 +78,11 @@ export const PROJECTS_CONTRIBUITED = [
     img: '',
     github: 'https://github.com/joaomarcelo09/ficha-acad-api',
   },
+];
+export type tab = { label: string; id: string };
+
+export const tabs: tab[] = [
+  { id: 'contact', label: 'Contato' },
+  { id: 'skills', label: 'Linguagens e Frameworks' },
+  { id: 'education', label: 'Formações' },
 ];
