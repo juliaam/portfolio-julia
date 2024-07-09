@@ -10,7 +10,6 @@ type CardProps = {
   status: string;
   github: string;
   link: string;
-  img: string;
 };
 
 export function Card({
@@ -20,7 +19,6 @@ export function Card({
   // status,
   github,
   link,
-  img,
 }: CardProps) {
   const stackIcons: any = {
     Javascript: '/javascript.svg',
@@ -39,7 +37,7 @@ export function Card({
     <div className="card">
       <p className="card__title">{title}</p>
       <p className="card__description">{description}</p>
-      {img && <img className="card__img" src={img} />}
+      {/* {img && <img className="card__img" src={img} />} */}
       <div className="card__stack">
         {stack.split(', ').map((tech, index) => (
           <img
