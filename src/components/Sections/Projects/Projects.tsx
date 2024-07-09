@@ -13,7 +13,6 @@ export function Projects() {
             title={project.title}
             description={project.description}
             stack={project.stack}
-            img={project.img}
             status={project.status}
             link={project.link}
             github={project.github}
@@ -25,7 +24,6 @@ export function Projects() {
       <div className="projects__cards">
         {PROJECTS_BYME.map((project) => (
           <Card
-            img={project.img}
             key={project.github}
             title={project.title}
             description={project.description}
